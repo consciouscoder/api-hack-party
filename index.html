@@ -5,23 +5,69 @@
 <head>
     <meta charset=utf-8>
     <title>API Hack App</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>    
-
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link rel="stylesheet" href="
+https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" type="text/css">    
 </head>
 
-    <body ng-controller="jediController as jCtrl">
+    <!--<body ng-controller="jediController as jCtrl">-->
+    
+ 
+    <body style="background-color: black" ng-controller="jediController as jCtrl">
         
-       {{ jCtrl.jedi.eye_color }}
+    <div class="container">
+    <div class ="row">
+    <div class="col-xs-12">
+    <h1 style="color: gold; text-align: center">In a galaxy far far away</h1>
+    </div>
+    </div>
+        <div class="row">
+            <div class="col-xs-4" class="feather"><img ng-click="jCtrl.alderaanShow()" src="images/alderaan1.jpg"></div>
+            <div class="col-xs-4"><img  ng-click="jCtrl.nabooShow()"src="images/naboo1.jpg"></div>
+            <div class="col-xs-4"><img ng-click="jCtrl.tatooineShow()" src="images/tattoine.jpg"></div>
+        </div>
+        <div class="row"> 
+                <!--ng-bind="jCtrl.planetStr"-->
+            <div class="col-xs-6 col-xs-offset-3" id="talkbox">
+            <span><B>Planet Name:</B> {{ jCtrl.planetName }}</span><BR>
+            <span><B>Population:</B> {{ jCtrl.planetPop }}</span><BR>
+            <span><B>Terrain:</B> {{ jCtrl.planetTerrain }}</span><BR>
+            <span><B>Climate:</B> {{ jCtrl.planetClimate }}</span><BR>    
+            <span><B>Diameter:</B> {{ jCtrl.planetDiameter }}</span><BR>
+            <span><B>Orbital Period:</B> {{ jCtrl.planetOrbital }}</span><BR>   
+            <span><B>Gravity:</B> {{ jCtrl.planetGravity }}</span><BR>                             
+            </div>
+        </div>
+    
         
-        <ul ng-repeat="j in jCtrl.jedi | orderBy: birth_year">
-          <li>Name: {{ j.name }}</li>
-          <li>Birth Year: {{ j.birth_year }}</li>
-          <li>Eyes color: {{ j.eye_color}}</li>
-          <li>Skin color: {{ j.skin_color}}</li>
-          <li>Homeworld: {{ j.homeworld }}</li>
-        </ul>
-                
+    </div>
+        
+
+        <script type="text/javascript" src="main.js"></script>
+    </body>       
+</html>        
+        
+        <!--<div>-->
+        <!--    <button ng-click="jCtrl.tatooineShow()">Tattooine</button>-->
+        <!--    <button ng-click="jCtrl.alderaanShow()">Alderaan</button>-->
+        <!--    <button ng-click="jCtrl.nabooShow()">Naboo</button>-->
+        <!--</div>-->
+        <!--<div ng-bind-html="jCtrl.planetStr"></div>-->
+        
+       
+       
+       
+        
+        
+        
+        <!--<ul ng-repeat="j in jCtrl.jedi | orderBy: birth_year">-->
+        <!--  <li>Name: {{ j.name }}</li>-->
+        <!--  <li>Birth Year: {{ j.birth_year }}</li>-->
+        <!--  <li>Eyes color: {{ j.eye_color}}</li>-->
+        <!--  <li>Skin color: {{ j.skin_color}}</li>-->
+        <!--  <li>Homeworld: {{ j.homeworld }}</li>-->
+        <!--</ul>-->
         
        <!-- <div ng-controller="pokeController as pCtrl">-->
             <!--{{ pCtrl.text }}-->
@@ -42,6 +88,6 @@
        <!-- </div>-->
 
         
-        <script type="text/javascript" src="main.js"></script>
-    </body>
-</html>
+<!--        <script type="text/javascript" src="main.js"></script>-->
+<!--    </body>-->
+<!--</html>-->
