@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html ng-app="myStarWarsApp">
+    
+<head>
+    <meta charset=utf-8>
+    <title>API Hack App</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>    
+
+
+</head>
+
+    <body ng-controller="jediController as jCtrl">
+        
+       {{ jCtrl.jedi.eye_color }}
+        
+        <ul ng-repeat="j in jCtrl.jedi | orderBy: birth_year">
+          <li>Name: {{ j.name }}</li>
+          <li>Birth Year: {{ j.birth_year }}</li>
+          <li>Eyes color: {{ j.eye_color}}</li>
+          <li>Skin color: {{ j.skin_color}}</li>
+          <li>Homeworld: {{ j.homeworld }}</li>
+        </ul>
+                
+        
+       <!-- <div ng-controller="pokeController as pCtrl">-->
+            <!--{{ pCtrl.text }}-->
+       <!--     <form ng-submit="pCtrl.searchPokemon()">-->
+       <!--         <input type="text" name="pokeName" ng-model="pCtrl.pokeName">-->
+       <!--         <button type="submit" name="button">Search for a Pokemon</button>-->
+       <!--     </form>-->
+       <!-- <BR>-->
+       <!-- Name: {{ pCtrl.pokemon.name }}-->
+       <!-- <BR>-->
+       <!-- ID: {{ pCtrl.pokemon.id }}-->
+       <!-- <BR>-->
+       <!--<div class-"">-->
+       <!--    <UL>-->
+       <!--        <li ng-repeat="poke in pCtrl.pokedex">{{ poke.pokemon_species.name }}</li>-->
+       <!--    </UL>-->
+       <!--</div>-->
+       <!-- </div>-->
+
+        
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
